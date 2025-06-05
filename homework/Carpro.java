@@ -40,19 +40,19 @@ public class Carpro {
 
             CarCount++;
 
-            System.out.println("차종이 추가되었습니다: " + model + ", " + company + ", " + date);
+            System.out.println("차량이 추가되었습니다: " + model + ", " + company + ", " + date);
         } else {
-            System.out.println("차종 수가 최대치가 초과했습니다.");
+            System.out.println("차량 수가 최대치가 초과했습니다.");
         }
     }
 
     // 조회 메서드
     public static void viewModel() {
         if (CarCount == 0) {
-            System.out.println("등록된 회원이 없습니다.");
+            System.out.println("등록된 차량이 없습니다.");
             return;
         }
-        System.out.println("등록된 회원 목록: ");
+        System.out.println("등록된 차량 목록: ");
         for (int i = 0; i < CarCount; i++) {
             System.out.println("인덱스 번호 : " + (i + 1));
 
@@ -76,17 +76,19 @@ public class Carpro {
         System.out.print("수정할 제조사를 입력하세요 : ");
         String company = scanner.nextLine();
 
+        System.out.print("수정할 연식을 입력하세요 : ");
+        String older = scanner.nextLine();
+
         String date = DateUtil.getCurrentDateTime();
 
-        Carmodel Model = new Carmodel(model, company, company, date);
-        models[index] = model;
+        Model[index] = new Carmodel(model, company, older, date);
 
         System.out.println("차량 정보가 수정되었습니다.");
     }
 
     // 삭제 메서드
     public static void deleteModel(Scanner scanner) {
-        System.out.print("삭제할 차종의 인덱스를 입력하세요 (0 ~ " + (CarCount - 1) + "): ");
+        System.out.print("삭제할 차량의 인덱스를 입력하세요 (0 ~ " + (CarCount - 1) + "): ");
         int index = scanner.nextInt();
         scanner.nextLine();
 
@@ -96,23 +98,19 @@ public class Carpro {
         }
 
         Carmodel model = Model[index];
-        System.out.println("삭제할 자동차 정보 : ");
+        System.out.println("삭제할 차량 정보 : ");
         model.showinfo();
 
-        models[index] = null;
+        Model[index] = null;
 
-        for (int i = 0; i < CarCount - 1; i++) {
+        for (int i = index; i < CarCount - 1; i++) {
             models[i] = models[i + 1];
         }
 
-        // models[CarCount - 1] = null;
-        // companys[CarCount - 1] = null;
-        // olders[CarCount - 1] = null;
-        // dates[CarCount - 1] = null;
         Model[CarCount - 1] = null;
 
         CarCount--;
-        System.out.println("차가 삭제되었습니다.");
+        System.out.println("차량이 삭제되었습니다.");
     }
 
     // 회원 더미 데이터 5개 추가
@@ -129,7 +127,7 @@ public class Carpro {
                         older, DateUtil.getCurrentDateTime());
                 CarCount++;
             } else {
-                System.out.println("더미 회원 추가 실패: 최대 회원 수 초과");
+                System.out.println("더미 차량 추가 실패: 최대 차량 수 초과");
                 break;
             }
         }
@@ -138,7 +136,7 @@ public class Carpro {
 
     // 회원 검색 기능
     public static void searchModel(Scanner scanner) {
-        System.out.println("검색할 자동차명을 입력하세요: ");
+        System.out.println("검색할 차량명을 입력하세요: ");
 
         String searchQuery = scanner.nextLine();
 
@@ -152,7 +150,7 @@ public class Carpro {
         }
 
         if (!found) {
-            System.out.println("해당 이메일로 등록된 회원이 없습니다.");
+            System.out.println("해당 차량명으로 등록된 차량이 없습니다.");
         }
     }
 }
