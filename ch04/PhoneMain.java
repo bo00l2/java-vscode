@@ -20,11 +20,15 @@ public class PhoneMain {
         phone[1] = phone2;
         phone[2] = phone3;
 
+        for (int i = 0; i < phone.length; i++) {
+            phone[i].showinfo2();
+        }
+
         System.out.println("phone1 주소: " + System.identityHashCode(phone1));
         System.out.println("phone2 주소: " + System.identityHashCode(phone2));
         System.out.println("phone2 주소: " + System.identityHashCode(phone3));
 
-        Phone phone4 = new Phone("Pixel 7", "90만원", "Google");
-        phone4.showinfo2();
+        // Phone phone4 = new Phone("Pixel 7", "90만원", "Google");
+        // phone4.showinfo2();
     }
 }
