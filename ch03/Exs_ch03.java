@@ -30,7 +30,7 @@ public class Exs_ch03 {
     // 배열 타입으로 리턴
     public static void ex3_8() {
         // 기본 1차원 ㄴ배열
-        int[] numbers = new int[5];
+        // int[] numbers = new int[5];
         int[] numbers2 = { 1, 2, 3, 4, 5 };
         // 첫번째, 각 요소의 값을 하나씩 접근
         // numbers2의 인덱스 3 조회
@@ -180,7 +180,7 @@ public class Exs_ch03 {
     // 퀴즈
     // 사용자로부터 문자를 입력받아, q가 나올 때까지 문자의 개수를 세는 프로그램 작성
     public static void StrQuiz(Scanner scanner) {
-        int n = 0;
+
         String total = "";
         int count = 0;
         String word;

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Exs_ch03_Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int menu;
+        // int menu;
 
         // int[] returnArray = Exs_ch03.ex3_8_return();
         // System.out.println("리턴된 배열의 값 확인 : " + );
@@ -28,5 +28,6 @@ public class Exs_ch03_Main {
         // Exs_ch03.ex3_2(scanner);
 
         // Exs_ch03.getSum(10);
+        scanner.close();
     }
 }

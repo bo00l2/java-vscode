@@ -1,7 +1,5 @@
 package ch02;
 
-import ch02.Introduce;
-
 public class Hello0530 {
     public static void main(String[] args) {
         System.out.println();

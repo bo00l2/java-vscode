@@ -7,7 +7,7 @@ public class Exs {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("이름 : ");
-        String name = scanner.nextLine();
+        // String name = scanner.nextLine();
 
         System.out.println("좋아하는 월 : ");
         int month = scanner.nextInt();
@@ -28,7 +28,7 @@ public class Exs {
             default:
                 break;
         }
-
+        scanner.close();
     }
 
     public static String getTernaryExam(int score) {
@@ -38,7 +38,6 @@ public class Exs {
 
     public static void getIncDecExam() {
         int a = 10;
-        int b = 20;
 
         System.out.println("a++: " + (a++));
         System.out.println("결과 1 a: " + a);
@@ -47,13 +46,13 @@ public class Exs {
     }
 
     public static String getTypeExam() {
-        long num1 = 100L; // 8byte
-        long num2 = 100;// 왼쪽 : 8바이트 , 오른쪽 : 정수 4바이트
+        // long num1 = 100L; // 8byte
+        // long num2 = 100;// 왼쪽 : 8바이트 , 오른쪽 : 정수 4바이트
         // int 타입 100을 long 타입으로 형변환 -> 자동 형변환
         // 작은 쪽 -> 큰 쪽으로 형변환 시에만 문제가 안됨
 
         // 반대로, 큰 쪽에서 작은 쪽으로 형변환 시에는, 강제로 형변환
-        byte num3 = 127; // 128은 byte 타입의 범위를 벗어남
+        // byte num3 = 127; // 128은 byte 타입의 범위를 벗어남
         int num4 = 128;
         // 강제로 형변환
         // 값의 손실이 발생하거나, 정상적인 출력 안나옴
@@ -74,4 +73,5 @@ public class Exs {
         String result = String.format("반지름 %.2f의 원의 면적은 %.2f입니다.", r, area);
         return result;
     }
+
 }

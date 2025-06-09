@@ -1,8 +1,5 @@
 package ch02;
 
-import java.util.Scanner;
-import ch03.Exs_ch03;
-
 public class Exs_Main {
     public static void main(String[] args) {
 

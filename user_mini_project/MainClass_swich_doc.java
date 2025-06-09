@@ -5,8 +5,6 @@ import java.util.Scanner;
 import ch02.OperConditionTest;
 import util.User.UserService;
 import util.Random.RandomUtil;
-import ch03.Exs_ch03;
-import ch03.Exs_ch03_Main;
 
 public class MainClass_swich_doc {
     public static void main(String[] args) {
@@ -48,7 +46,7 @@ public class MainClass_swich_doc {
                     RandomUtil.generateLottoNum();
                     break;
                 case "6":
-                    Exs_ch03_Main.StrQuiz();
+                    // Exs_ch03_Main.StrQuiz();
                     break;
                 case "0":
                     System.out.println("프로그램을 종료합니다. 감사합니다!");
